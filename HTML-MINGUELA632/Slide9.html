@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title> Slide </title>
+			<style type="text/css">  
+			ul.ppt {  
+			position: relative;  
+			}  
+			.ppt li {  
+			list-style-type: none;  
+			position: absolute;  
+			top: 0;  
+			left:0;  
+			}  
+  
+			.ppt img {  
+			border: 1px solid #e7e7e7;  
+			padding: 5px;  
+			background-color: #ececec;  
+			}  
+		</style>  
+	</head>
+	<body bgcolor="#FE2E2E">
+		<ul class="ppt">  
+			<li><img src="Art2.JPG" height = "160" width = "400"></img></li>  
+			<li><img src="Red2.PNG" height = "160" width = "400"></img></li>  
+			<li><img src="Battle1.JPG" height = "160" width = "400"></img></li>  
+			<li><img src="Battle2.PNG" height = "160" width = "400"></img></li> 
+			<li><img src="Blood1.JPG" height = "160" width = "400"></img></li>
+			<li><img src="Fall3.JPG" height = "160" width = "400"></img></li>
+			<li><img src="FALL4.JPG" height = "160" width = "400"></img></li>
+			<li><img src="Geralt.JPG" height = "160" width = "400"></img></li>
+			<li><img src="Geralt2.JPG" height = "160" width = "400"></img></li>
+			<li><img src="GOF.JPG" height = "160" width = "400"></img></li>
+			<li><img src="Rs1.JPG" height = "160" width = "400"></img></li>
+			<li><img src="RS.JPG" height = "160" width = "400"></img></li>
+			<li><img src="st2.png" height = "160" width = "400"></img></li>
+			<li><img src="st1.JPG" height = "160" width = "400"></img></li>	
+		</ul>
+		
+  <!-- LIBRERIA JQUERY PARA HACER LOS EFECTOS ***		-->
+  
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
+		<script type="text/javascript">  
+			$('.ppt li:gt(0)').hide();  
+			$('.ppt li:last').addClass('last');  
+  
+			var cur = $('.ppt li:first');  
+  
+			function animate() {  
+			cur.fadeOut( 1000 );  
+			if ( cur.attr('class') == 'last' )  
+				cur = $('.ppt li:first');  
+			else  
+				cur = cur.next();  
+				cur.fadeIn( 1000 );  
+			}  
+  
+			$(function() {  
+			setInterval( "animate()", 3000 );  
+			});  
+		</script>  
+	</BODY>
+</HTML>
